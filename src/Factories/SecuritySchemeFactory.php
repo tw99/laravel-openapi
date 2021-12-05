@@ -4,7 +4,7 @@ namespace Vyuldashev\LaravelOpenApi\Factories;
 
 use GoldSpecDigital\ObjectOrientedOAS\Objects\SecurityScheme;
 
-abstract class SecuritySchemeFactory
+interface SecuritySchemeFactory
 {
-    abstract public function build(): SecurityScheme;
+    public function build(): SecurityScheme;
 }

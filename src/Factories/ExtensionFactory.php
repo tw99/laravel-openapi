@@ -2,12 +2,12 @@
 
 namespace Vyuldashev\LaravelOpenApi\Factories;
 
-abstract class ExtensionFactory
+interface ExtensionFactory
 {
-    abstract public function key(): string;
+    public function key(): string;
 
     /**
      * @return string|null|array
      */
-    abstract public function value();
+    public function value();
 }

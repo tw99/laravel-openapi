@@ -5,11 +5,14 @@ namespace Examples\Petstore\OpenApi\Responses;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\MediaType;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Response;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Schema;
+use Vyuldashev\LaravelOpenApi\Concerns\Referencable;
 use Vyuldashev\LaravelOpenApi\Contracts\Reusable;
 use Vyuldashev\LaravelOpenApi\Factories\ResponseFactory;
 
-class ErrorValidationResponse extends ResponseFactory implements Reusable
+class ErrorValidationResponse implements ResponseFactory, Reusable
 {
+    use Referencable;
+
     public function build(): Response
     {
         $response = Schema::object()->properties(

@@ -3,11 +3,9 @@
 namespace Vyuldashev\LaravelOpenApi\Factories;
 
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Response;
-use Vyuldashev\LaravelOpenApi\Concerns\Referencable;
+use Vyuldashev\LaravelOpenApi\Contracts\Reference;
 
-abstract class ResponseFactory
+interface ResponseFactory extends Reference
 {
-    use Referencable;
-
-    abstract public function build(): Response;
+    public function build(): Response;
 }

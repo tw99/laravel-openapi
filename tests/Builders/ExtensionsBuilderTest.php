@@ -72,7 +72,7 @@ class ExtensionsBuilderTest extends TestCase
     }
 }
 
-class FakeExtension extends ExtensionFactory
+class FakeExtension implements ExtensionFactory
 {
     public function key(): string
     {

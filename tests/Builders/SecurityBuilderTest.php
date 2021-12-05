@@ -212,7 +212,7 @@ class SecurityBuilderTest extends TestCase
     }
 }
 
-class JwtSecurityScheme extends SecuritySchemeFactory
+class JwtSecurityScheme implements SecuritySchemeFactory
 {
     public function build(): SecurityScheme
     {

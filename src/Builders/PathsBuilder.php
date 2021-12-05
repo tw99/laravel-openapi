@@ -72,6 +72,7 @@ class PathsBuilder
 
     protected function routes(): Collection
     {
+        $a = 1;
         /** @noinspection CollectFunctionInCollectionInspection */
         return collect(app(Router::class)->getRoutes())
             ->filter(static fn (Route $route) => $route->getActionName() !== 'Closure')

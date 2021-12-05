@@ -4,7 +4,7 @@ namespace Vyuldashev\LaravelOpenApi\Factories;
 
 use GoldSpecDigital\ObjectOrientedOAS\Objects\PathItem;
 
-abstract class CallbackFactory
+interface CallbackFactory
 {
-    abstract public function build(): PathItem;
+    public function build(): PathItem;
 }

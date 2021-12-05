@@ -5,11 +5,14 @@ namespace Examples\Petstore\OpenApi\Schemas;
 use GoldSpecDigital\ObjectOrientedOAS\Contracts\SchemaContract;
 use GoldSpecDigital\ObjectOrientedOAS\Exceptions\InvalidArgumentException;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Schema;
+use Vyuldashev\LaravelOpenApi\Concerns\Referencable;
 use Vyuldashev\LaravelOpenApi\Contracts\Reusable;
 use Vyuldashev\LaravelOpenApi\Factories\SchemaFactory;
 
-class PetSchema extends SchemaFactory implements Reusable
+class PetSchema implements SchemaFactory, Reusable
 {
+    use Referencable;
+
     /**
      * @return Schema
      *
